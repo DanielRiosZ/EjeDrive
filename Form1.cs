@@ -79,7 +79,7 @@ namespace EjeDrive
 
             // Paso 1: Construir columnas y nombres de "cabeceras"
 
-            foreach (DataGridViewRow columna in data.Columns)
+            foreach (DataGridViewColumn columna in data.Columns)
             {
                 indiceColumna++;
                 exportarExcel.Cells[1, indiceColumna] = columna.HeaderText;
