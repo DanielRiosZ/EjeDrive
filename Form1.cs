@@ -109,7 +109,7 @@ namespace EjeDrive
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            DescargaExcel(dataGridView1);
         }
 
     }
