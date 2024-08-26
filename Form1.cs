@@ -21,15 +21,32 @@ namespace EjeDrive
         private void button1_Click(object sender, EventArgs e)
         {
             // Paso 0: Condición de vacío
-            if(textBox1.Text.Equals("") || textBox2.Text.Equals(""))
+            if (textBox1.Text.Equals("") || textBox2.Text.Equals("") || textBox3.Text.Equals("") || textBox4.Text.Equals(""))
             {
                 MessageBox.Show("Los numeros tienen que ser mayor que 0, no vacíos");
                 return;
             }
             
             // Paso 1: Inicialización de parámetros
-            int totalValores = Convert.ToInt32(textBox1.Text);
-            int ValorMuestra = Convert.ToInt32(textBox2.Text);
+
+            int a = Convert.ToInt32(textBox1.Text);
+            int c = Convert.ToInt32(textBox2.Text);
+            int m = Convert.ToInt32(textBox3.Text);
+            int x0 = Convert.ToInt32(textBox4.Text);
+
+            // Paso 1.5 : Condiciones
+
+            if(a <= 0 ||  c <= 0 || x0 <= 0)
+            {
+                MessageBox.Show("Los valores a, c, x0 tienen que ser mayores que CERO");
+                return;
+            }
+
+            if (m <= a || m <= c || m <= x0)
+            {
+                MessageBox.Show("El valor de m tiene que ser mayor que a, c y x0");
+                return;
+            }
 
             // Paso 2: Declarar clase algoritmo genético
 
@@ -37,7 +54,7 @@ namespace EjeDrive
 
             // Paso 3: Llamar método principal
 
-            List<int> listaEnteros = algoritmo.GenerarValores(totalValores);
+            List<int> listaEnteros = algoritmo.GeneradorCongruencial(a, c, m, x0);
 
             // Paso 4: Llenar el grid
 
