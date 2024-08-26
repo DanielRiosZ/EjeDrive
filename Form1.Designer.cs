@@ -56,7 +56,6 @@
             this.label1.Size = new System.Drawing.Size(80, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Parámetro 1";
-            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataGridView1
             // 
@@ -99,6 +98,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Descarga Excel";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Form1
             // 
